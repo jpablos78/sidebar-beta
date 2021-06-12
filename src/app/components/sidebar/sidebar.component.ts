@@ -17,9 +17,10 @@ import { SidebarService } from './sidebar.service';
 })
 export class SidebarComponent implements OnInit {
   menus = [];
+  isDropup = true;
   constructor(public sidebarservice: SidebarService) {
     this.menus = sidebarservice.getMenuList();
-   }
+  }
 
   ngOnInit() {
   }
