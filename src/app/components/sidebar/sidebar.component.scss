@@ -369,7 +369,7 @@
           width: calc(100% - 40px);
 
           .notification-time {
-            font-size: .7rem;
+            font-size: .8rem;
             color: #828282;
           }
 
@@ -411,6 +411,9 @@
   }
 }
 
+.size-icon {
+  font-size: 1.3rem;
+}
 
 /*------------------------------default theme---------------------------------*/
 $bg-sidebar-wrapper : #1d1d1d;

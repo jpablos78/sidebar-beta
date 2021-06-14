@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginService } from './services/login/login.service';
+import { Observable } from 'rxjs';
 import { SidebarService } from './components/sidebar/sidebar.service';
 
 @Component({
@@ -6,12 +8,18 @@ import { SidebarService } from './components/sidebar/sidebar.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'sidebar-beta';
+  isLoggedIn$: Observable<boolean>;
 
   constructor(
+    private loginService: LoginService,
     public sidebarservice: SidebarService
   ) { }
+
+  ngOnInit() {
+    this.isLoggedIn$ = this.loginService.isLoggedIn;    
+  }
 
   toggleSidebar() {
     this.sidebarservice.setSidebarState(!this.sidebarservice.getSidebarState());

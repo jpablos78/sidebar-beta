@@ -33,8 +33,9 @@
         </div>
       </div>
       <div class="sidebar-menu">
-        <ul style="font-size: 1.2rem;">
-          <li *ngFor="let menu of menus" [ngClass]="{'active': menu.active , 'sidebar-dropdown':menu.type === 'dropdown' , 'header-menu':menu.type === 'header'}">
+        <ul style="font-size: 1.1rem;">
+          <li *ngFor="let menu of menus"
+            [ngClass]="{'active': menu.active , 'sidebar-dropdown':menu.type === 'dropdown' , 'header-menu':menu.type === 'header'}">
             <span *ngIf="menu.type === 'header'">{{menu.title}}</span>
             <a *ngIf="menu.type !== 'header'" href="#" (click)='toggle(menu)'>
               <i class="{{menu.icon}}"></i>
@@ -45,7 +46,8 @@
               <ul>
                 <li *ngFor="let submenu of menu.submenus">
                   <a href="#"> {{submenu.title}}
-                    <span *ngIf="submenu.badge" class="badge badge-pill" [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
+                    <span *ngIf="submenu.badge" class="badge badge-pill"
+                      [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
                   </a>
                 </li>
               </ul>
@@ -59,7 +61,7 @@
     <div class="dropdown" dropdown [dropup]="isDropup">
 
       <a href="#" dropdownToggle>
-        <i class="fa fa-bell"></i>
+        <i class="fa fa-bell size-icon"></i>
         <span class="badge badge-pill badge-warning notification">5</span>
       </a>
       <div class="dropdown-menu notifications" *dropdownMenu>
@@ -116,7 +118,7 @@
     </div>
     <div class="dropdown" dropdown [dropup]="isDropup">
       <a href="#" dropdownToggle>
-        <i class="fa fa-envelope"></i>
+        <i class="fa fa-envelope size-icon"></i>
         <span class="badge badge-pill badge-success notification">7</span>
       </a>
       <div class="dropdown-menu messages" *dropdownMenu>
@@ -176,7 +178,7 @@
     </div>
     <div class="dropdown" dropdown [dropup]="isDropup">
       <a href="#" dropdownToggle>
-        <i class="fa fa-cog"></i>
+        <i class="fa fa-cog size-icon"></i>
         <span class="badge-sonar"></span>
       </a>
       <div class="dropdown-menu" *dropdownMenu>
@@ -187,7 +189,7 @@
     </div>
     <div>
       <a href="#">
-        <i class="fa fa-power-off"></i>
+        <i class="fa fa-power-off size-icon"></i>
       </a>
     </div>
   </div>

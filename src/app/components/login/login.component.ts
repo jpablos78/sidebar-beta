@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { Observable } from 'rxjs';
 
-// import { LoginService } from './../../services/login/login.service';
+import { LoginService } from './../../services/login/login.service';
 // import { EncrDecrService } from './../../services/encrypt/encr-decr.service';
 
 // import { getMensajeErrorCommon } from "./../../common/validators/validators";
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     // private encrDecr: EncrDecrService,
     private router: Router,
-    // private loginService: LoginService,
+    private loginService: LoginService,
     public messageService: MessageService
   ) { }
 
@@ -90,6 +90,8 @@ export class LoginComponent implements OnInit {
   // }
 
   callLogin() {
+    this.loginService.login();
+    this.router.navigate(['/home']);
     //   const postData = new FormData();
 
     //   postData.append('login', this.form.get('txtUsuario').value);
@@ -109,7 +111,7 @@ export class LoginComponent implements OnInit {
     //         localStorage.removeItem('loginPC');
     //         localStorage.removeItem('clavePC');
     //       }
-    this.router.navigate(['/home']);
+    //this.router.navigate(['/home']);
     //       this.getMenuFavoritos(data);
     //     },
     //     error => {
