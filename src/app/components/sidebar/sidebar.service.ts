@@ -8,6 +8,32 @@ export class SidebarService {
   _hasBackgroundImage = true;
   menus = [
     {
+      title: 'Favoritos',      
+      type: 'header'
+    },
+    {
+      title: 'Cambio de Clave',
+      icon: 'fa fa-unlock-alt',
+      active: false,
+      type: 'simple',
+      badge: {
+        text: 'Beta',
+        class: 'badge-primary'
+      },
+    },
+    {
+      title: 'Favoritos',
+      icon: 'fa fa-star',
+      active: false,
+      type: 'simple'
+    },
+    {
+      title: 'Procesar Dctos Electronicos',
+      icon: 'fa fa-file-alt',
+      active: false,
+      type: 'simple'
+    },
+    {
       title: 'general',
       type: 'header'
     },
@@ -113,38 +139,12 @@ export class SidebarService {
           title: 'Open street map'
         }
       ]
-    },
-    {
-      title: 'Extra',
-      type: 'header'
-    },
-    {
-      title: 'Documentation',
-      icon: 'fa fa-book',
-      active: false,
-      type: 'simple',
-      badge: {
-        text: 'Beta',
-        class: 'badge-primary'
-      },
-    },
-    {
-      title: 'Calendar',
-      icon: 'fa fa-calendar',
-      active: false,
-      type: 'simple'
-    },
-    {
-      title: 'Examples',
-      icon: 'fa fa-folder',
-      active: false,
-      type: 'simple'
     }
   ];
   constructor() { }
 
   toggle() {
-    this.toggled = ! this.toggled;
+    this.toggled = !this.toggled;
   }
 
   getSidebarState() {
