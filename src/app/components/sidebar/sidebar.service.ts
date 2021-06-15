@@ -12,7 +12,7 @@ export class SidebarService {
       type: 'header'
     },
     {
-      title: 'Cambio de Clave',
+      title: 'Cambio de Clave con un titulo bien pero bien largo para que se trunque',
       icon: 'fa fa-unlock-alt',
       active: false,
       type: 'simple',
