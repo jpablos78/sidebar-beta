@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 // import { PaginaErrorComponent } from './components/pagina-error/pagina-error.component';
-// import { CambioClaveComponent } from './components/ModuloGeneral/cambio-clave/cambio-clave.component';
+ import { CambioClaveComponent } from './components/ModuloGeneral/cambio-clave/cambio-clave.component';
 // import { MantenimientoPerfilComponent } from './components/ModuloGeneral/mantenimiento-perfil/mantenimiento-perfil.component';
 // import { FavoritosComponent } from './components/ModuloGeneral/favoritos/favoritos.component';
 // import { MantenimientoUsuariosComponent } from './components/ModuloGeneral/mantenimiento-usuarios/mantenimiento-usuarios.component';
@@ -35,11 +35,11 @@ const appRoutes: Routes = [
         path: 'login',
         component: LoginComponent
     },
-    // {
-    //     path: 'cambio-clave/:id_menu',
-    //     component: CambioClaveComponent,
-    //     canActivate: [AuthGuard, PermisosGuard]
-    // },
+    {
+        path: 'cambio-clave',
+        component: CambioClaveComponent,
+        //canActivate: [AuthGuard, PermisosGuard]
+    },
     // {
     //     path: 'favoritos/:id_menu',
     //     component: FavoritosComponent,

@@ -37,12 +37,21 @@
           <li *ngFor="let menu of menus"
             [ngClass]="{'active': menu.active , 'sidebar-dropdown':menu.type === 'dropdown' , 'header-menu':menu.type === 'header'}">
             <span *ngIf="menu.type === 'header'">{{menu.title}}</span>
-            <a *ngIf="menu.type === 'simple'" href="#" (click)='toggle(menu)'
+
+            <!-- <a [routerLink]="[menu.ruta, menu.id_menu]" class="nav-link" data-toggle="collapse"
+            data-target=".navbar-collapse.show"><i [class]="menu.icono"></i>
+            <span>
+                {{ menu.nombre_menu }}
+            </span>
+        </a> -->
+
+
+            <a [routerLink]="['cambio-clave']" *ngIf="menu.type === 'simple'" (click)='toggle(menu)'
               style="width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
               <i class="{{menu.icon}}"></i>
               <span>{{menu.title}}</span>
             </a>
-            <a *ngIf="menu.type === 'dropdown'"  (click)='toggle(menu)'
+            <a *ngIf="menu.type === 'dropdown'" (click)='toggle(menu)'
               style="width: 260px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
               <i class="{{menu.icon}}"></i>
               <span>{{menu.title}}</span>
@@ -50,7 +59,11 @@
             <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
               <ul>
                 <li *ngFor="let submenu of menu.submenus">
-                  <a href="#"> {{submenu.title}}
+                  <a href="#"
+                    style="width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px; padding-left: 3px;"
+                    pTooltip="Enter your username" tooltipPosition="left">
+                    <i class="{{menu.icon}}"></i>
+                    {{submenu.title}}
                     <span *ngIf="submenu.badge" class="badge badge-pill"
                       [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
                   </a>
@@ -59,6 +72,10 @@
             </div>
           </li>
         </ul>
+      </div>
+
+      <div class="sidebar-header">
+        <a href="#">NOMBRE DEL SISTEMA</a>
       </div>
     </perfect-scrollbar>
   </div>

@@ -34,110 +34,102 @@ export class SidebarService {
       type: 'simple'
     },
     {
-      title: 'general',
+      title: 'Modulo General',
       type: 'header'
     },
     {
-      title: 'Dashboard',
-      icon: 'fa fa-tachometer-alt',
+      title: 'Usuarios',
+      icon: 'fa fa-users',
       active: false,
-      type: 'dropdown',
-      badge: {
-        text: 'New ',
-        class: 'badge-warning'
-      },
+      type: 'dropdown',      
       submenus: [
         {
-          title: 'Dashboard 1',
-          badge: {
-            text: 'Pro ',
-            class: 'badge-success'
-          }
+          title: 'Mantenimiento de Usuarios'                    
         },
         {
-          title: 'Dashboard 2'
+          title: 'Cambio de Clave'
         },
         {
-          title: 'Dashboard 3'
+          title: 'Favoritos'
         }
       ]
     },
     {
-      title: 'E-commerce',
-      icon: 'fa fa-shopping-cart',
+      title: 'Seguridades',
+      icon: 'fa fa-key',
       active: false,
-      type: 'dropdown',
-      badge: {
-        text: '3',
-        class: 'badge-danger'
-      },
+      type: 'dropdown',      
       submenus: [
         {
-          title: 'Products',
+          title: 'Mantenimiento de Perfil',
         },
         {
-          title: 'Orders'
+          title: 'Permisos x opcion'
         },
         {
-          title: 'Credit cart'
+          title: 'Objetos x opcion'
+        },
+        {
+          title: 'Permisos x objetos'
         }
       ]
     },
     {
-      title: 'Components',
-      icon: 'far fa-gem',
+      title: 'Parametros Generales',
+      icon: 'fa fa-indent',
       active: false,
       type: 'dropdown',
       submenus: [
         {
-          title: 'General',
+          title: 'Mantenimiento de Empresas',
         },
         {
-          title: 'Panels'
+          title: 'Mantenimiento de Sucursales'
         },
         {
-          title: 'Tables'
-        },
-        {
-          title: 'Icons'
-        },
-        {
-          title: 'Forms'
+          title: 'Configuracion de Correo'
         }
       ]
     },
     {
-      title: 'Charts',
-      icon: 'fa fa-chart-line',
+      title: 'Facturacion Electronica',
+      type: 'header'
+    },    
+    {
+      title: 'Parametros',
+      icon: 'fa fa-indent',
       active: false,
       type: 'dropdown',
       submenus: [
         {
-          title: 'Pie chart',
+          title: 'Ambiente',
         },
         {
-          title: 'Line chart'
+          title: 'Parametros FE'
         },
         {
-          title: 'Bar chart'
+          title: 'Parametros Batch'
         },
         {
-          title: 'Histogram'
+          title: 'Permisos Tipos Documentos'
+        },
+        {
+          title: 'Mantenimiento de Correos'
+        },
+        {
+          title: 'Mantenimiento de Correo Errores'
         }
       ]
     },
     {
-      title: 'Maps',
-      icon: 'fa fa-globe',
+      title: 'Transacciones',
+      icon: 'fas fa-cogs',
       active: false,
       type: 'dropdown',
       submenus: [
         {
-          title: 'Google maps',
-        },
-        {
-          title: 'Open street map'
-        }
+          title: 'Procesa Documentos Electronicos',
+        }        
       ]
     }
   ];
